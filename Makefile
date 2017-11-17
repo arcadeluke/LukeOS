@@ -1,4 +1,4 @@
-GPPPARAMS = -m32
+GPPPARAMS = -m32 -Fno-use-cxa-atexit --nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore
 ASPARAMS = --32
 LDPARAMS = -melf_i386
 
@@ -14,3 +14,4 @@ mykernel.bin: linker.ld $(objects)
   
 install: mykernel.bin
   sudo cp $< /boot/mykernl.bin
+  
